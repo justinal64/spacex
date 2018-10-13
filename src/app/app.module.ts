@@ -5,6 +5,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from "./app.component";
 import { CardComponent } from "./components/card/card.component";
 import { GridComponent } from "./components/grid/grid.component";
+import { NavComponent } from "./components/nav/nav.component";
 
 const appRoutes: Routes = [
   { path: "card", component: CardComponent },
@@ -13,7 +14,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, GridComponent],
+  declarations: [AppComponent, CardComponent, GridComponent, NavComponent],
   imports: [
     RouterModule.forRoot(
       appRoutes,
