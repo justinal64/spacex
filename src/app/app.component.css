@@ -23,5 +23,9 @@
 .carousel img {
     max-width: 100%;
     flex: 1 1 auto;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 75px);
+}
+
+app-nav {
+    width: 100%;
 }

@@ -1,8 +1,38 @@
 .nav {
-    height: 150px;
+    height: 75px;
+    width: 100%;
 }
 
-.logo {
-    width: 250px;
-    height: 150px;
+.nav .nav-bg {
+    height: 75px;
+    background: #181c1f;
+}
+
+.nav .main-nav {
+    padding-top: 2em;
+}
+
+.nav .logo {
+    vertical-align: middle;
+}
+
+.nav-spacing {
+    padding: 0 .5em;
+}
+
+.flex-item {
+    justify-content: space-around;
+}
+
+.flex-container {
+    justify-content: center;
+}
+
+.flex-container a {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.about-separation {
+    padding-left: 4em;
 }
