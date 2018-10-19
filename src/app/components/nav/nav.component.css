@@ -61,3 +61,17 @@
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
+
+@media (max-width: 925px) {
+    .nav,
+    .nav .nav-bg {
+        height: 100px;
+    }
+}
+
+@media (max-width: 525px) {
+    .nav,
+    .nav .nav-bg {
+        height: 115px;
+    }
+}
