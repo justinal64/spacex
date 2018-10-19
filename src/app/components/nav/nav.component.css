@@ -16,6 +16,10 @@
     padding: 0 .5em;
 }
 
+.nav .main-nav a.nav-gallery {
+    padding-right: 1em;
+}
+
 .nav .logo {
     vertical-align: middle;
 }
