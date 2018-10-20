@@ -1,7 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from "./app.component";
 import { CardComponent } from "./components/card/card.component";
 import { GridComponent } from "./components/grid/grid.component";
@@ -20,8 +19,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    BrowserModule,
-    FlexLayoutModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
