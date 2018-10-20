@@ -7,6 +7,7 @@ import { CardComponent } from "./components/card/card.component";
 import { GridComponent } from "./components/grid/grid.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { DraganddropComponent } from "./components/draganddrop/draganddrop.component";
+import { CarouselComponent } from "./components/carousel/carousel.component";
 
 const appRoutes: Routes = [
   { path: "card", component: CardComponent },
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     CardComponent,
     GridComponent,
     NavComponent,
-    DraganddropComponent
+    DraganddropComponent,
+    CarouselComponent
   ],
   imports: [
     DragDropModule,
