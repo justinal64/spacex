@@ -12,11 +12,37 @@
 }
 
 .carousel .footer {
-    height: 100px;
     position: absolute;
     color: white;
     bottom: 0;
     background: black;
     width: 100%;
     opacity: .7;
+}
+
+.footer .img-desc {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5em 0;
+}
+
+.footer .learn-more {
+    width: 180px;
+    height: 36px;
+    line-height: 34px;
+    padding: 0;
+    background: white;
+    border-color: white;
+}
+
+
+/* Remove default margin */
+
+.footer h1 {
+    margin: 0;
+}
+
+.footer .carousel-caption {
+    height: 60px;
+    background: #21272b;
 }
