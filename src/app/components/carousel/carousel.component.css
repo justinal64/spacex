@@ -15,14 +15,11 @@
     position: absolute;
     color: white;
     bottom: 0;
-    background: black;
     width: 100%;
-    opacity: .7;
+    background: rgba(0, 0, 0, .7);
 }
 
 .footer .img-desc {
-    display: flex;
-    justify-content: space-evenly;
     margin: 1.5em 0;
 }
 
@@ -44,5 +41,13 @@
 
 .footer .carousel-caption {
     height: 60px;
-    background: #21272b;
+    background-color: #21272b;
+}
+
+.flex-justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.display-flex {
+    display: flex;
 }
