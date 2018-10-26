@@ -1,0 +1,53 @@
+.carousel {
+    display: flex;
+    height: 100%;
+    align-self: center;
+    position: relative;
+}
+
+.carousel img {
+    max-width: 100%;
+    flex: 1 1 auto;
+    height: 500px;
+}
+
+.carousel .footer {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.footer .img-desc {
+    margin: 1.5em 0;
+}
+
+.footer .learn-more {
+    width: 180px;
+    height: 36px;
+    line-height: 34px;
+    padding: 0;
+    background: white;
+    border-color: white;
+}
+
+
+/* Remove default margin */
+
+.footer h1 {
+    margin: 0;
+}
+
+.footer .carousel-caption {
+    height: 60px;
+    background-color: #21272b;
+}
+
+.flex-justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.display-flex {
+    display: flex;
+}
