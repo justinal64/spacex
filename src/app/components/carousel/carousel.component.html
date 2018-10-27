@@ -6,15 +6,7 @@
             <button class="flex-item learn-more">Learn More</button>
         </div>
         <div class="carousel-caption flex-container flex-justify-space-evenly display-flex">
-            <div class="flex-item">
-                <span>Test</span>
-            </div>
-            <div class="flex-item">
-                <span>Test</span>
-            </div>
-            <div class="flex-item">
-                <span>Test</span>
-            </div>
+            <span class="flex-item" *ngFor="let item of Carousel let i = index" (click)="test();">{{i}}{{item.description}}</span>
         </div>
     </div>
 </div>
