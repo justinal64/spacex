@@ -1,12 +1,16 @@
 <div class="carousel">
-    <img src="https://cdn.teslarati.com/wp-content/uploads/2017/09/SpaceX-Moon-Base-SpaceX.jpg">
+    <img src="{{CarouselImgSrc}}">
     <div class="footer">
         <div class="img-desc flex-container flex-justify-space-evenly display-flex">
             <h1 class="flex-item">First Passenger On Lunar BFR Mission</h1>
             <button class="flex-item learn-more">Learn More</button>
         </div>
         <div class="carousel-caption flex-container flex-justify-space-evenly display-flex">
-            <span class="flex-item" *ngFor="let item of Carousel let i = index" (click)="test();">{{i}}{{item.description}}</span>
+            <span class="flex-item" *ngFor="let item of Carousel let i = index" (click)="changeCarousel(item.src); ">
+        <span class="numeric ">
+          0{{i +1}}
+        </span> {{item.description}}
+            </span>
         </div>
     </div>
 </div>
