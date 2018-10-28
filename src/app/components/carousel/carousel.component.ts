@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from "@angular/core";
 
+interface Item {
+  src: string;
+  description: string;
+}
+
 @Component({
   selector: "app-carousel",
   templateUrl: "./carousel.component.html",
@@ -8,8 +13,10 @@ import { Component, OnInit, Input } from "@angular/core";
 export class CarouselComponent implements OnInit {
   @Input()
   Carousel: any[];
-  CarouselImgSrc: String =
+  CarouselImgSrc =
     "https://cdn.teslarati.com/wp-content/uploads/2017/09/SpaceX-Moon-Base-SpaceX.jpg";
+  CarouselDesc = "First Passenger On Lunar BFR Mission";
+  Iterate = 0;
   constructor() {}
 
   ngOnInit() {
@@ -32,10 +39,20 @@ export class CarouselComponent implements OnInit {
         description: "Making life Multiplanetary"
       }
     ];
+    setInterval(() => {
+      console.log(this.Carousel.length);
+      this.changeCarousel(this.Carousel[this.Iterate]);
+      if (this.Iterate === this.Carousel.length - 1) {
+        this.Iterate = 0;
+      } else {
+        this.Iterate++;
+      }
+    }, 10000);
   }
 
-  public changeCarousel(src: String) {
-    console.log("src = ", src);
-    this.CarouselImgSrc = src;
+  public changeCarousel(item: Item) {
+    console.log("did this fire???");
+    this.CarouselImgSrc = item.src;
+    this.CarouselDesc = item.description;
   }
 }
