@@ -42,11 +42,8 @@ export class CarouselComponent implements OnInit {
     setInterval(() => {
       console.log(this.Carousel.length);
       this.changeCarousel(this.Carousel[this.Iterate]);
-      if (this.Iterate === this.Carousel.length - 1) {
-        this.Iterate = 0;
-      } else {
-        this.Iterate++;
-      }
+      this.Iterate =
+        this.Iterate === this.Carousel.length - 1 ? 0 : this.Iterate++;
     }, 10000);
   }
 
