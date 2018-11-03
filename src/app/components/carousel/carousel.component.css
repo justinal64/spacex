@@ -52,18 +52,27 @@
     display: flex;
 }
 
-.animate-show.ng-hide-add,
-.animate-show.ng-hide-remove {
-    transition: all linear 0.5s;
-    display: block !important;
+
+/* Test */
+
+:host {
+    display: block;
+    overflow: hidden;
+    /* Hide everything that doesn't fit compoennt */
 }
 
-.animate-show.ng-hide-add.ng-hide-add-active,
-.animate-show.ng-hide-remove {
-    opacity: 0;
+.parent {
+    height: 100%;
+    width: 200%;
+    /* Make the parent element to take up twice
+                         of the component's width */
+    display: flex;
+    /* Evenly divide width between children */
 }
 
-.animate-show.ng-hide-add,
-.animate-show.ng-hide-remove.ng-hide-remove-active {
-    opacity: 1;
+.parent div {
+    flex: 1;
 }
+
+
+/* End Test */

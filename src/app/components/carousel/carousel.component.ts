@@ -36,6 +36,31 @@ interface Item {
       ),
       transition("open => closed", [animate("2s")]),
       transition("closed => open", [animate("2.5s")])
+    ]),
+    trigger("slideIn", [
+      state(
+        "open",
+        style({
+          height: "200px",
+          opacity: 1,
+          backgroundColor: "yellow"
+        })
+      ),
+      state(
+        "closed",
+        style({
+          height: "100px",
+          opacity: 0.5,
+          backgroundColor: "green"
+        })
+      ),
+      transition("open => closed", [animate("2s")]),
+      transition("closed => open", [animate("2.5s")])
+    ]),
+    trigger("slide", [
+      state("left", style({ transform: "translateX(0)" })),
+      state("right", style({ transform: "translateX(-50%)" })),
+      transition("* => *", animate(300))
     ])
   ]
 })

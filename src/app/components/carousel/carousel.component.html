@@ -1,8 +1,5 @@
 <div class="carousel">
-    <!-- <img src="{{CarouselImgSrc}}"> -->
-    <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
-        <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
-    </div>
+    <img src="{{CarouselImgSrc}}">
     <div class="footer">
         <div class="img-desc flex-container flex-justify-space-evenly display-flex">
             <h1 class="flex-item">{{CarouselDesc}}</h1>
@@ -14,6 +11,18 @@
           0{{i +1}}
         </span> {{item.description}}
             </span>
+
         </div>
     </div>
+</div>
+<div class="parent">
+    <div>
+        <ng-content select="[leftPane]"></ng-content>
+    </div>
+    <div>
+        <ng-content select="[rightPane]"></ng-content>
+    </div>
+</div>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
 </div>
