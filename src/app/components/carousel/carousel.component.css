@@ -52,39 +52,18 @@
     display: flex;
 }
 
-
-/* Test */
-
-section {
-    position: relative;
-    height: 565px;
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+    transition: all linear 0.5s;
+    display: block !important;
 }
 
-section img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove {
+    opacity: 0;
 }
 
-.top {
-    animation-name: fade;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 8s;
-    animation-direction: alternate;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
 }

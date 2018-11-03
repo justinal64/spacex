@@ -1,4 +1,11 @@
 import { Component, OnInit, Input } from "@angular/core";
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from "@angular/animations";
 
 interface Item {
   src: string;
@@ -8,7 +15,29 @@ interface Item {
 @Component({
   selector: "app-carousel",
   templateUrl: "./carousel.component.html",
-  styleUrls: ["./carousel.component.css"]
+  styleUrls: ["./carousel.component.css"],
+  animations: [
+    trigger("openClose", [
+      state(
+        "open",
+        style({
+          height: "200px",
+          opacity: 1,
+          backgroundColor: "yellow"
+        })
+      ),
+      state(
+        "closed",
+        style({
+          height: "100px",
+          opacity: 0.5,
+          backgroundColor: "green"
+        })
+      ),
+      transition("open => closed", [animate("2s")]),
+      transition("closed => open", [animate("2.5s")])
+    ])
+  ]
 })
 export class CarouselComponent implements OnInit {
   @Input()
@@ -17,6 +46,13 @@ export class CarouselComponent implements OnInit {
     "https://cdn.teslarati.com/wp-content/uploads/2017/09/SpaceX-Moon-Base-SpaceX.jpg";
   CarouselDesc = "First Passenger On Lunar BFR Mission";
   Iterate = 0;
+  // test area
+  isOpen = true;
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
+  // end test area
   constructor() {}
 
   ngOnInit() {
@@ -40,15 +76,14 @@ export class CarouselComponent implements OnInit {
       }
     ];
     setInterval(() => {
-      console.log(this.Carousel.length);
       this.changeCarousel(this.Carousel[this.Iterate]);
+      this.toggle();
       this.Iterate =
         this.Iterate === this.Carousel.length - 1 ? 0 : this.Iterate++;
-    }, 10000);
+    }, 3000);
   }
 
   public changeCarousel(item: Item) {
-    console.log("did this fire???");
     this.CarouselImgSrc = item.src;
     this.CarouselDesc = item.description;
   }

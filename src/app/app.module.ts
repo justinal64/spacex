@@ -8,6 +8,7 @@ import { GridComponent } from "./components/grid/grid.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { DraganddropComponent } from "./components/draganddrop/draganddrop.component";
 import { CarouselComponent } from "./components/carousel/carousel.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
   { path: "card", component: CardComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
     ),
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
