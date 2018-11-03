@@ -41,38 +41,25 @@
 
 .footer .carousel-caption {
     height: 60px;
-    background-color: #21272b;
+    /* background-color: #21272b; */
 }
 
 .flex-justify-space-evenly {
     justify-content: space-evenly;
 }
 
+.flex-justify-center {
+    justify-content: center;
+}
+
 .display-flex {
     display: flex;
 }
 
-
-/* Test */
-
-:host {
-    display: block;
-    overflow: hidden;
-    /* Hide everything that doesn't fit compoennt */
+.caption-bg {
+    background-color: #21272b;
 }
 
-.parent {
-    height: 100%;
-    width: 200%;
-    /* Make the parent element to take up twice
-                         of the component's width */
-    display: flex;
-    /* Evenly divide width between children */
+.carousel-caption-spacer {
+    flex-grow: 2;
 }
-
-.parent div {
-    flex: 1;
-}
-
-
-/* End Test */
