@@ -41,13 +41,25 @@
 
 .footer .carousel-caption {
     height: 60px;
-    background-color: #21272b;
+    /* background-color: #21272b; */
 }
 
 .flex-justify-space-evenly {
     justify-content: space-evenly;
 }
 
+.flex-justify-center {
+    justify-content: center;
+}
+
 .display-flex {
     display: flex;
+}
+
+.caption-bg {
+    background-color: #21272b;
+}
+
+.carousel-caption-spacer {
+    flex-grow: 2;
 }
