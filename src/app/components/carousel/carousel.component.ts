@@ -17,6 +17,7 @@ export class CarouselComponent implements OnInit {
     "https://cdn.teslarati.com/wp-content/uploads/2017/09/SpaceX-Moon-Base-SpaceX.jpg";
   CarouselDesc = "First Passenger On Lunar BFR Mission";
   Iterate = 0;
+  TransBg: any;
   constructor() {}
 
   ngOnInit() {
@@ -41,14 +42,22 @@ export class CarouselComponent implements OnInit {
     ];
     setInterval(() => {
       this.changeCarousel(this.Carousel[this.Iterate]);
-      this.Iterate =
-        this.Iterate === this.Carousel.length - 1 ? 0 : this.Iterate++;
+      console.log("this.Iterate: ", this.Iterate);
+      console.log("this.Carousel.length: ", this.Carousel.length);
+      // this.Iterate =
+      //   this.Iterate === this.Carousel.length - 1 ? 0 : this.Iterate++;
+      if (this.Iterate === this.Carousel.length - 1) {
+        this.Iterate = 0;
+      } else {
+        this.Iterate++;
+      }
     }, 3000);
   }
 
   public changeCarousel(item: Item) {
     console.log("this = ", this);
     console.log("item = ", item);
+    this.TransBg = item;
     this.CarouselImgSrc = item.src;
     this.CarouselDesc = item.description;
   }
