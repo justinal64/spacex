@@ -8,7 +8,8 @@
         <div class="carousel-caption flex-container flex-justify-center display-flex">
             <span class="flex-item caption-bg flex-grow-2"></span>
             <span class="flex-item caption-bg flex-grow-1" *ngFor="let item of Carousel let i = index" [class.transparent-bg]="TransBg === item" (click)="changeCarousel(item); ">
-        <span class="numeric">0{{i +1}}</span> {{item.description}}
+        <span class="numeric">0{{i +1}}</span>
+            <span class="desc">{{item.description}}</span>
             </span>
             <span class="flex-item caption-bg flex-grow-2"></span>
         </div>
