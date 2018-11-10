@@ -79,6 +79,14 @@
     padding-left: 2em;
 }
 
+.carousel-caption>span {
+    border-left: 1px solid grey;
+}
+
+.desc {
+    text-align: center;
+}
+
 @media (max-width: 500px) {
     .footer .carousel-caption {
         height: 80px;
