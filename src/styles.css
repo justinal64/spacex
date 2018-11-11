@@ -4,3 +4,26 @@ body {
     height: 100%;
     margin: 0;
 }
+
+
+/* flex-box */
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-grow-2 {
+    flex-grow: 2;
+}
+
+.flex-justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.display-flex {
+    display: flex;
+}

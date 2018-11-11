@@ -44,29 +44,9 @@
     height: 60px;
 }
 
-.flex-justify-space-evenly {
-    justify-content: space-evenly;
-}
-
-.flex-justify-center {
-    justify-content: center;
-}
-
-.display-flex {
-    display: flex;
-}
-
 .caption-bg {
     background-color: #21272b;
     padding-top: 1em;
-}
-
-.flex-grow-1 {
-    flex-grow: 1;
-}
-
-.flex-grow-2 {
-    flex-grow: 2;
 }
 
 .transparent-bg {

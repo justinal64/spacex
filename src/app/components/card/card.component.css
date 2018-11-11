@@ -1,9 +1,16 @@
 .cards {
-    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
 }
 
+.flex-item {
+    height: 250px;
+}
+
 .card {
     flex: 0 0 250px
+}
+
+.card-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
