@@ -14,9 +14,8 @@ interface Item {
 export class CarouselComponent implements OnInit {
   @Input()
   Carousel: any[];
-  CarouselImgSrc =
-    "https://cdn.teslarati.com/wp-content/uploads/2017/09/SpaceX-Moon-Base-SpaceX.jpg";
-  CarouselDesc = "First Passenger On Lunar BFR Mission";
+  CarouselImgSrc = CarouselData[2].src;
+  CarouselDesc = CarouselData[2].description;
   Iterate = 0;
   TransBg: any;
   constructor() {}

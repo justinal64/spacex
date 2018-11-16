@@ -8,25 +8,15 @@
 
 <div class="card flex-container flex-justify-center display-flex">
     <div class="flex-item flex-grow-2"></div>
-    <div class="flex-item flex-grow-1 card-shadow card-spacing">
+    <div *ngFor="let item of Cards let i = index" class="flex-item flex-grow-1 card-shadow card-spacing">
         <div class="flex-container flex-space-around center-text">
-            <div class="thumbnail"><img class="thumbnail" src="https://c.slashgear.com/wp-content/uploads/2018/10/Soyuz-NASA.jpg" alt="spacex launch"></div>
-            <div>Desc</div>
-            <div>Learn More -></div>
-        </div>
-    </div>
-    <div class="flex-item flex-grow-1 card-shadow card-spacing">
-        <div class="flex-container flex-space-around">
-            <div class="thumbnail"><img class="thumbnail" src="https://c.slashgear.com/wp-content/uploads/2018/10/Soyuz-NASA.jpg" alt="spacex launch"></div>
-            <div>Desc</div>
-            <div>Learn More -></div>
-        </div>
-    </div>
-    <div class="flex-item flex-grow-1 card-shadow card-spacing">
-        <div class="flex-container flex-space-around">
-            <div class="thumbnail"><img class="thumbnail" src="https://c.slashgear.com/wp-content/uploads/2018/10/Soyuz-NASA.jpg" alt="spacex launch"></div>
-            <div>Desc</div>
-            <div>Learn More -></div>
+            <div class="thumbnail">
+                <img class="thumbnail" src="https://c.slashgear.com/wp-content/uploads/2018/10/Soyuz-NASA.jpg" alt="spacex launch">
+                <div>
+                    <span>{{item.description}}</span>
+                    <a href="google.com">Learn More -></a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="flex-item flex-grow-2"></div>
