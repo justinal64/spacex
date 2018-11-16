@@ -1,16 +1,3 @@
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-item {
-    height: 250px;
-}
-
-.card {
-    flex: 0 0 250px
-}
-
 .card-shadow {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
@@ -19,12 +6,16 @@
     margin: .75em;
 }
 
-.card-inner-padding {
-    padding: .5em;
-    border: 2px solid black;
+.thumbnail img {
+    height: 150px;
 }
 
-.thumbnail {
-    width: 100px;
-    height: 150px;
+.center-text {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .card {
+        flex-direction: column;
+    }
 }
