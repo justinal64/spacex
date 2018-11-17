@@ -1,16 +1,3 @@
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-item {
-    height: 250px;
-}
-
-.card {
-    flex: 0 0 250px
-}
-
 .card-shadow {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
@@ -19,12 +6,38 @@
     margin: .75em;
 }
 
-.card-inner-padding {
-    padding: .5em;
-    border: 2px solid black;
+.card-padding {
+    padding: 2em;
 }
 
-.thumbnail {
-    width: 100px;
-    height: 150px;
+.thumbnail img {
+    max-width: 100%;
+    height: 256px;
+}
+
+.card-flex {
+    flex: 1 1 20em;
+}
+
+.learn-more {
+    color: #3569a4;
+    text-decoration: none;
+}
+
+.learn-more:hover {
+    transition: border-bottom .5s;
+    border-bottom: 2px solid #3569a4;
+}
+
+.arrow {
+    color: black;
+}
+
+@media (max-width: 800px) {
+    .card {
+        flex-direction: column;
+    }
+    .thumbnail {
+        text-align: center;
+    }
 }
