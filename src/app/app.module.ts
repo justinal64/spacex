@@ -9,11 +9,11 @@ import { NavComponent } from "./components/nav/nav.component";
 import { DraganddropComponent } from "./components/draganddrop/draganddrop.component";
 import { CarouselComponent } from "./components/carousel/carousel.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FooterComponent } from "./components/footer/footer.component";
 
 const appRoutes: Routes = [
   { path: "card", component: CardComponent },
   { path: "grid", component: GridComponent }
-  // { path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -23,7 +23,8 @@ const appRoutes: Routes = [
     GridComponent,
     NavComponent,
     DraganddropComponent,
-    CarouselComponent
+    CarouselComponent,
+    FooterComponent
   ],
   imports: [
     DragDropModule,

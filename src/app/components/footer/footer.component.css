@@ -1,0 +1,12 @@
+.footer {
+    height: 170px;
+    background: black;
+}
+
+ul {
+    background: white;
+}
+
+.flex-container {
+    display: flex;
+}
