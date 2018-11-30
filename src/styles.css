@@ -16,6 +16,10 @@ body {
     flex-grow: 2;
 }
 
+.flex-grow-3 {
+    flex-grow: 3;
+}
+
 .flex-justify-space-evenly {
     justify-content: space-evenly;
 }
@@ -26,4 +30,12 @@ body {
 
 .display-flex {
     display: flex;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-space-between {
+    justify-content: space-between;
 }
